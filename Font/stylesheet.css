@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Heavy.eot');
+    src: local('Neufreit Heavy'), local('Neufreit-Heavy'),
+        url('Neufreit-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Heavy.woff2') format('woff2'),
+        url('Neufreit-Heavy.woff') format('woff'),
+        url('Neufreit-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Demi';
+    src: url('Neufreit-DemiBold.eot');
+    src: local('Neufreit Demi Bold'), local('Neufreit-DemiBold'),
+        url('Neufreit-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-DemiBold.woff2') format('woff2'),
+        url('Neufreit-DemiBold.woff') format('woff'),
+        url('Neufreit-DemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-BoldItalic.eot');
+    src: local('Neufreit Bold Italic'), local('Neufreit-BoldItalic'),
+        url('Neufreit-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-BoldItalic.woff2') format('woff2'),
+        url('Neufreit-BoldItalic.woff') format('woff'),
+        url('Neufreit-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-BlackItalic.eot');
+    src: local('Neufreit Black Italic'), local('Neufreit-BlackItalic'),
+        url('Neufreit-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-BlackItalic.woff2') format('woff2'),
+        url('Neufreit-BlackItalic.woff') format('woff'),
+        url('Neufreit-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Demi';
+    src: url('Neufreit-DemiBoldItalic.eot');
+    src: local('Neufreit Demi Bold Italic'), local('Neufreit-DemiBoldItalic'),
+        url('Neufreit-DemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-DemiBoldItalic.woff2') format('woff2'),
+        url('Neufreit-DemiBoldItalic.woff') format('woff'),
+        url('Neufreit-DemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Bold.eot');
+    src: local('Neufreit Bold'), local('Neufreit-Bold'),
+        url('Neufreit-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Bold.woff2') format('woff2'),
+        url('Neufreit-Bold.woff') format('woff'),
+        url('Neufreit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Extra';
+    src: url('Neufreit-ExtraBold.eot');
+    src: local('Neufreit Extra Bold'), local('Neufreit-ExtraBold'),
+        url('Neufreit-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-ExtraBold.woff2') format('woff2'),
+        url('Neufreit-ExtraBold.woff') format('woff'),
+        url('Neufreit-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Italic.eot');
+    src: local('Neufreit Italic'), local('Neufreit-Italic'),
+        url('Neufreit-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Italic.woff2') format('woff2'),
+        url('Neufreit-Italic.woff') format('woff'),
+        url('Neufreit-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Extra';
+    src: url('Neufreit-ExtraBoldItalic.eot');
+    src: local('Neufreit Extra Bold Italic'), local('Neufreit-ExtraBoldItalic'),
+        url('Neufreit-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-ExtraBoldItalic.woff2') format('woff2'),
+        url('Neufreit-ExtraBoldItalic.woff') format('woff'),
+        url('Neufreit-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-HeavyItalic.eot');
+    src: local('Neufreit Heavy Italic'), local('Neufreit-HeavyItalic'),
+        url('Neufreit-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-HeavyItalic.woff2') format('woff2'),
+        url('Neufreit-HeavyItalic.woff') format('woff'),
+        url('Neufreit-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Black.eot');
+    src: local('Neufreit Black'), local('Neufreit-Black'),
+        url('Neufreit-Black.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Black.woff2') format('woff2'),
+        url('Neufreit-Black.woff') format('woff'),
+        url('Neufreit-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Extra';
+    src: url('Neufreit-ExtraLight.eot');
+    src: local('Neufreit Extra Light'), local('Neufreit-ExtraLight'),
+        url('Neufreit-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-ExtraLight.woff2') format('woff2'),
+        url('Neufreit-ExtraLight.woff') format('woff'),
+        url('Neufreit-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit Extra';
+    src: url('Neufreit-ExtraLightItalic.eot');
+    src: local('Neufreit Extra Light Italic'), local('Neufreit-ExtraLightItalic'),
+        url('Neufreit-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-ExtraLightItalic.woff2') format('woff2'),
+        url('Neufreit-ExtraLightItalic.woff') format('woff'),
+        url('Neufreit-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-MediumItalic.eot');
+    src: local('Neufreit Medium Italic'), local('Neufreit-MediumItalic'),
+        url('Neufreit-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-MediumItalic.woff2') format('woff2'),
+        url('Neufreit-MediumItalic.woff') format('woff'),
+        url('Neufreit-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-LightItalic.eot');
+    src: local('Neufreit Light Italic'), local('Neufreit-LightItalic'),
+        url('Neufreit-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-LightItalic.woff2') format('woff2'),
+        url('Neufreit-LightItalic.woff') format('woff'),
+        url('Neufreit-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Medium.eot');
+    src: local('Neufreit Medium'), local('Neufreit-Medium'),
+        url('Neufreit-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Medium.woff2') format('woff2'),
+        url('Neufreit-Medium.woff') format('woff'),
+        url('Neufreit-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Light.eot');
+    src: local('Neufreit Light'), local('Neufreit-Light'),
+        url('Neufreit-Light.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Light.woff2') format('woff2'),
+        url('Neufreit-Light.woff') format('woff'),
+        url('Neufreit-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neufreit';
+    src: url('Neufreit-Regular.eot');
+    src: local('Neufreit'), local('Neufreit-Regular'),
+        url('Neufreit-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Neufreit-Regular.woff2') format('woff2'),
+        url('Neufreit-Regular.woff') format('woff'),
+        url('Neufreit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
