@@ -19,11 +19,10 @@ const findUser = (email, callback) => {
     }
 
     if (results.length > 0) {
-      // Assuming your user object has a structure similar to { user_id, email, password }
       const user = results[0];
       return callback(null, user);
     } else {
-      return callback(null, null); // User not found
+      return callback(null, null); 
     }
   });
 };
