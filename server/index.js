@@ -1,10 +1,24 @@
-const app = require("./app");
-const db = require("./database");
-
-//Setting the port and listening for connections
+const express = require("express");
 const port = 3000;
+const cors = require("cors");
+const app = express();
+
+app.use(express.json());
+app.use(cors());
+
+//Require application Route modules
+const ridesRoute = require("./routes/rides");
+
+//Middleware to parse incoming requests with JSON and urlencoded payloads
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+//Add Routes to the middleware handling path, specifying the respective URL path
+app.use("/api/rides", ridesRoute);
+app.get("/getAll", ridesRoute);
+app.post("/add", ridesRoute);
+app.get("/:ride_id", ridesRoute);
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
-

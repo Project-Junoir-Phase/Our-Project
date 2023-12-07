@@ -32,7 +32,8 @@ module.exports = {
     seatsBooked,
     seatsAv,
     user_id,
-    client_id
+    reservationDate,
+    reservationTime
   ) {
     const sql = `INSERT INTO posts (startingPoint,
     endingPoint,
@@ -47,7 +48,8 @@ module.exports = {
     seatsBooked,
     seatsAv,
     user_id,
-    client_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
+    reservationDate,
+    reservationTime) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
     connection.query(
       sql,
       [
@@ -64,7 +66,8 @@ module.exports = {
         seatsBooked,
         seatsAv,
         user_id,
-        client_id,
+        reservationDate,
+        reservationTime,
       ],
       (error, results, fields) => {
         callback(error, results);
