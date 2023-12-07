@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS `carpool`.`users` (
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
   UNIQUE INDEX `user_id_UNIQUE` (`user_id` ASC) VISIBLE)
 ENGINE = InnoDB
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -51,32 +52,39 @@ CREATE TABLE IF NOT EXISTS `carpool`.`rides` (
   `pet` TINYINT NOT NULL DEFAULT '0',
   `backSeat` TINYINT NOT NULL DEFAULT '0',
   `loggage` TINYINT NOT NULL DEFAULT '0',
-  `prise` INT NOT NULL,
+  `price` INT NOT NULL,
   `carColor` VARCHAR(45) NOT NULL,
   `carPlate` VARCHAR(145) NOT NULL,
   `carType` VARCHAR(45) NOT NULL,
   `seatsBooked` INT NOT NULL DEFAULT '0',
   `seatsAv` INT NOT NULL DEFAULT '1',
   `user_id` INT NOT NULL,
-  `client_id` INT NULL,
+  `reservationDate` VARCHAR(65) NOT NULL,
+  `time` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`ride_id`),
   INDEX `fk_rides_users_idx` (`user_id` ASC) VISIBLE,
   CONSTRAINT `fk_rides_users`
     FOREIGN KEY (`user_id`)
-    REFERENCES `carpool`.`users` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `carpool`.`users` (`user_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
+-- -----------------------------------------------------
+-- Table `carpool`.`Booking`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `carpool`.`Booking` (
+  `idBooking` INT NOT NULL,
+  `user_id` INT NULL,
+  `ride_id` INT NULL,
+  PRIMARY KEY (`idBooking`))
+ENGINE = InnoDB;
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
-
 
 
 -- Inserting data into carpool.users

@@ -1,5 +1,4 @@
 // import the database connection
-
 const connection = require("../index");
 module.exports = {
   // a function which fetches all the rides
@@ -25,29 +24,31 @@ module.exports = {
     pet,
     backSeat,
     loggage,
-    prise,
+    price,
     carColor,
     carPlate,
     carType,
     seatsBooked,
     seatsAv,
     user_id,
-    client_id
+    reservationDate,
+    date
   ) {
-    const sql = `INSERT INTO posts (startingPoint,
+    const sql = `INSERT INTO rides (startingPoint,
     endingPoint,
     smoking,
     pet,
     backSeat,
     loggage,
-    prise,
+    price,
     carColor,
     carPlate,
     carType,
     seatsBooked,
     seatsAv,
     user_id,
-    client_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
+    reservationDate,
+    date) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
     connection.query(
       sql,
       [
@@ -57,14 +58,15 @@ module.exports = {
         pet,
         backSeat,
         loggage,
-        prise,
+        price,
         carColor,
         carPlate,
         carType,
         seatsBooked,
         seatsAv,
         user_id,
-        client_id,
+        reservationDate,
+        date,
       ],
       (error, results, fields) => {
         callback(error, results);
