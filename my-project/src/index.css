@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* font-family: "Kaleko 105 W00 Bold"; 
+
+or 
+
+@font-face {
+    font-family: "Kaleko 105 W00 Bold";
+    src: url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.eot");
+    src: url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/42e4a546ec93b7815a3579cf410b3714.svg#Kaleko 105 W00 Bold")format("svg");
+}
+
+or
+
+@import url(https://db.onlinewebfonts.com/c/42e4a546ec93b7815a3579cf410b3714?family=Kaleko+105+W00+Bold);
+
+*/
