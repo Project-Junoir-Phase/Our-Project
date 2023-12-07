@@ -1,4 +1,4 @@
-require("dotenv")
+require("dotenv").config()
 
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
@@ -9,42 +9,49 @@ module.exports = {
 
 addUser : async (req , res) => {
 
-  try {
-    let{email , name , lastName , age , gender , phone , password} = req.body
+    let{name, lastName, dateOfBirth, phoneNum, email, gender,password} = req.body
 
-    if(!(email && name && lastName && age && gender && phone && password)) res.status(400).send("All inputs are Required")
+    if(!(email && name && lastName && dateOfBirth && gender && phoneNum && password)) res.status(400).send("All inputs are Required")
 
     let encryptedPassword = await bcrypt.hash(password , 10)
     
-    const user = await addUser((err ,result) => {
-      if(err) res.status(400).send("this is the error" , err)
-      else console.log("Account was created")
-    }, email , name , lastName , age , gender , phone , encryptedPassword)
-
-    const token = jwt.sign(
-      {user_id : user.user_id , email , name , lastName , age , gender , phone , bio : user.bio , review : user.review , picProf : user.picProf , picCIN : user.picCIN},
-      process.env.SECRET_KEY,
-      {
-        expiresIn : "4h"
-      }
-    )
-    
-    return res.status(201).json(user)
-
-  }catch(err) {
-      res.status(400).send("this is the error" , err)
-  }
+    addUser((err ,result) => {
+      if(err) res.status(500).send("this is the error" , err)
+      else res.status(201).send("account was created")
+    }, email , name , lastName , dateOfBirth , gender , phoneNum , encryptedPassword)
 
 },
 
-Login : async (req , res) => {
-  try{
-    
+Login :async (req, res) => {
+  let { email, password } = req.body;
 
-  }catch{
-
+  if (!(email && password)) {
+    return res.status(400).send("All input is required");
   }
-}
 
+  findUser(email, async (err, user) => {
+    if (err) {
+      return res.status(500).send("Internal Server Error");
+    }
+
+    if (!user) {
+      return res.status(404).send("User not found");
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+
+    if (isPasswordValid) {
+      const token = jwt.sign(
+        { user_id: user.user_id, email },
+        process.env.SECRET_KEY,
+        { expiresIn: "4h" }
+      );
+
+      return res.status(200).json({ token });
+    } else {
+      return res.status(401).send("Invalid password");
+    }
+  });
+}
 
 }
