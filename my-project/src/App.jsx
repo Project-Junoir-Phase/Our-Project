@@ -12,7 +12,7 @@ import Search from './search';
 import SearchPage from './SearchPage';
 import AddForm from "./add/AddForm";
 import SignUp from './User Componet/SignUp/SignUp';
-import Login from './User Componet/Login/Login';
+import Login from './User Componet/Login/login';
 
 function App() {
   
