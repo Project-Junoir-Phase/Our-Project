@@ -12,12 +12,24 @@ import Search from './search';
 import SearchPage from './SearchPage';
 import AddForm from "./add/AddForm";
 import SignUp from './User Componet/SignUp/SignUp';
-
 import Login from './User Componet/Login/Login';
+import LandingPage from './LandingPage/HomePage';
 import RideDet from './Componet/searchRide/RideDet';
 import AllRides from './Componet/searchRide/AllRides';
 import DummyData from '../dummyData';
+
+
+
+
+
+
+
 export const searchContext = createContext()
+
+
+
+
+
 
 
 function App() {
@@ -72,17 +84,22 @@ var data = []
           <Route path="/AddRide" element={<AddForm />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/LandingPage" element={<LandingPage />} />
 
-          {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
+            
+            
+            
+            
+
+
+
+
+
         </Routes>
       </Router>
     </React.Suspense>
-    </searchContext.Provider>
-     {/* <AddForm />; */}
 
-    {/* <div className='app'>
-       <Calender/> 
-    </div> */}
+    </searchContext.Provider>
     </>
   )
 
