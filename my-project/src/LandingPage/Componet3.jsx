@@ -19,7 +19,7 @@ const Componet3 = ()=>{
           alt=""
           src="/mesa-de-trabajo-1-2@2x.png"
         />
-        <div className="absolute top-[79px] left-[754px] tracking-[0.03em] leading-[145.5%] font-semibold">
+        <div className="absolute top-[79px] left-[754px] tracking-[0.03em] leading-[145.5%] text-[36px] font-semibold">
           Help us keep you safe from scams
         </div>
         <div className="absolute top-[134px] left-[754px] text-sm tracking-[-0.01em] leading-[150%] font-medium whitespace-pre-wrap">

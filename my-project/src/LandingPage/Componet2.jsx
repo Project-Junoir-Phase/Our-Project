@@ -4,8 +4,6 @@ import React from "react";
 
 const Componet2 =()=>{
 
-
-
     return (
         <>
          
@@ -17,14 +15,14 @@ const Componet2 =()=>{
             src="/172506-money-icon-1.svg"
           />
           <div className="w-[284px] h-[110px] flex flex-col items-start justify-start gap-[12px]">
-            <div className="relative tracking-[-0.04em] leading-[145.5%]">
+            <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Your pick of rides at low prices
             </div>
             <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray">
               <p className="[margin-block-start:0] [margin-block-end:19px]">
                 No matter where you’re going, by bus or
               </p>
-              <p className="[margin-block-start:0] [margin-block-end:19px]">
+              <p className="[margin-block-start:0]  [margin-block-end:19px]">
                 carpool, find the perfect ride from our wide
               </p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`range of destinations and routes at low `}</p>
@@ -41,7 +39,7 @@ const Componet2 =()=>{
             src="/10758932-user-shield-icon-1.svg"
           />
           <div className="w-[296px] h-[129px] flex flex-col items-start justify-start gap-[12px]">
-            <div className="relative tracking-[-0.04em] leading-[145.5%]">
+            <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Trust who you travel with
             </div>
             <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray inline-block w-[296px]">
@@ -62,7 +60,7 @@ const Componet2 =()=>{
             src="/8675030-ic-fluent-flash-on-regular-icon-1.svg"
           />
           <div className="w-[293px] h-[110px] flex flex-col items-start justify-start gap-[12px]">
-            <div className="relative tracking-[-0.04em] leading-[145.5%]">
+            <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Scroll, click, tap and go!
             </div>
             <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray">
