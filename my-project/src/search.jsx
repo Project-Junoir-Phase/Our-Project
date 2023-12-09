@@ -8,6 +8,7 @@ const Search = ()=>{
 
     return(
         <>
+        
         <div className="absolute top-[187px] left-[201px] w-[1018px] h-[59px]">
         <div className="absolute top-[0px] left-[0px] rounded-2xl bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[1018px] h-[59px]" />
         <div className="absolute top-[0px] left-[867px] rounded-2xl bg-deepskyblue w-[151px] h-[59px] overflow-hidden">
