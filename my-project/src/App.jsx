@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import NotFound from './NotFond';
 import './App.css'
 import Calender from './Calender'  
 import NavBar from './NavBar';   
-
+import Search from './search';
+import SearchPage from './SearchPage';
 function App() {
-
+  
 
   return (
     <>
@@ -18,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<NavBar />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/Search" element={<SearchPage />} />
           {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
         </Routes>
       </Router>
