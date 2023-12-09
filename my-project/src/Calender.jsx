@@ -3,7 +3,7 @@ import { Calendar } from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 
-function MyCalendar() {
+function MyCalendar({getBD}) {
   const [date, setDate] = useState(new Date());
   const [formattedDate, setFormattedDate] = useState('');
 
@@ -13,6 +13,7 @@ function MyCalendar() {
     let month = value.getMonth() + 1;
     let day = value.getDate();
     setFormattedDate(`${day}/${month}/${year}`);
+    getBD(setFormattedDate)
   };
 
   return (

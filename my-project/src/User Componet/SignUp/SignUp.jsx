@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import {BrowserRouter, Routes, Route, Link,} from "react-router-dom"
+import {BrowserRouter, Routes, Route,} from "react-router-dom"
 import axios from 'axios'
 import Email from './email'
 import FullName from './name&lastName'
@@ -26,7 +26,7 @@ const SignUp = () => {
   }
 
   return (
-    <UserContext.Provider value={{userData , setUserData}}>
+    <UserContext.Provider value={{userData , setUserData, userRegister}}>
     <BrowserRouter>
     <Routes>
       <Route path='/Register/Email' element={<Email />}/>
