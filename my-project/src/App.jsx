@@ -7,28 +7,11 @@ import NotFound from './NotFond';
 import './App.css'
 import Calender from './Calender'  
 import NavBar from './NavBar';   
-
+import AddForm from "./add/AddForm";
 function App() {
 
 
-  return (
-    <>
-      <React.Suspense fallback={<>Loading...</>}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<NavBar />} />
-          <Route path="*" element={<NotFound />} />
-          {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
-        </Routes>
-      </Router>
-    </React.Suspense>
-
-
-    {/* <div className='app'>
-       <Calender/> 
-    </div> */}
-    </>
-  )
+  return <AddForm />;
 }
 
 export default App
