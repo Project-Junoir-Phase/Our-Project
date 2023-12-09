@@ -13,7 +13,7 @@ import SearchPage from './SearchPage';
 import AddForm from "./add/AddForm";
 import SignUp from './User Componet/SignUp/SignUp';
 import Login from './User Componet/Login/Login';
-
+import LandingPage from './LandingPage/HomePage';
 function App() {
   
 
@@ -29,16 +29,10 @@ function App() {
           <Route path="/AddRide" element={<AddForm />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<Login />} />
-
-          {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
+          <Route path="/LandingPage" element={<LandingPage />} />
         </Routes>
       </Router>
     </React.Suspense>
-     {/* <AddForm />; */}
-
-    {/* <div className='app'>
-       <Calender/> 
-    </div> */}
     </>
   )
 

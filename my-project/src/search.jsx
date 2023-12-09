@@ -8,7 +8,6 @@ const Search = ()=>{
 
     return(
         <>
-        
         <div className="absolute top-[187px] left-[201px] w-[1018px] h-[59px]">
         <div className="absolute top-[0px] left-[0px] rounded-2xl bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[1018px] h-[59px]" />
         <div className="absolute top-[0px] left-[867px] rounded-2xl bg-deepskyblue w-[151px] h-[59px] overflow-hidden">
@@ -55,7 +54,7 @@ const Search = ()=>{
             src="/group-2.svg"
           />
           <input
-            className="[border:none] font-estedad-vf text-xl bg-[transparent] absolute top-[5px] left-[34px] w-[236px] h-10 flex flex-row items-center justify-center p-2.5 box-border"
+            className="[border:none] font-estedad-vf text-xl bg-[transparent] absolute top-[5px] left-[34px] w-[236px] h-9 flex flex-row items-center justify-center p-2.5 box-border"
             placeholder="Going to..."
             type="text"
           />
