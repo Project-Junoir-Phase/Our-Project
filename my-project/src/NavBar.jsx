@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React ,{  useEffect , useState} from "react";
 import { Img } from "./Componet/img";
 import { Text } from "./Componet/text";
 import SearchPage from "./SearchPage";
