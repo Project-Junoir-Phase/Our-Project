@@ -52,6 +52,15 @@ Login :async (req, res) => {
       return res.status(401).send("Invalid password");
     }
   });
+},
+
+getUser : (req , res) => {
+  try{
+    
+    findUser()
+  }catch (err) {
+
+  }
 }
 
 }

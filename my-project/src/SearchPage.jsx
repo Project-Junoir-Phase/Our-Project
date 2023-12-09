@@ -13,7 +13,7 @@ const SearchPage = ()=>{
         Where do you want to go?
       </p>
     </div>
-        <Search />
+        <Search/>
         </>
     )
 }

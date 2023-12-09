@@ -1,12 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
-const Ride = ({ rides , getOneRide }) => {
+const Ride = ({ localRides , getOneRide }) => {
   const navigate  = useNavigate()
-  console.log(rides, "guhu");
+  console.log(localRides, "guhu");
   return (
     <div>
-      {rides.map((ride) => {
+      {localRides.map((ride) => {
         console.log(ride,"ghjkjhgyhuioliuytfghj");
         return (
           <div
