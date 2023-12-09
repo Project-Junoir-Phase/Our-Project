@@ -25,29 +25,31 @@ module.exports = {
     pet,
     backSeat,
     loggage,
-    prise,
+    price,
     carColor,
     carPlate,
     carType,
     seatsBooked,
     seatsAv,
     user_id,
-    client_id
+    reservationDate,
+    reservationTime
   ) {
-    const sql = `INSERT INTO posts (startingPoint,
+    const sql = `INSERT INTO rides (startingPoint,
     endingPoint,
     smoking,
     pet,
     backSeat,
     loggage,
-    prise,
+    price,
     carColor,
     carPlate,
     carType,
     seatsBooked,
     seatsAv,
     user_id,
-    client_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
+    reservationDate,
+    reservationTime) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);`;
     connection.query(
       sql,
       [
@@ -57,14 +59,15 @@ module.exports = {
         pet,
         backSeat,
         loggage,
-        prise,
+        price,
         carColor,
         carPlate,
         carType,
         seatsBooked,
         seatsAv,
         user_id,
-        client_id,
+        reservationDate,
+        reservationTime,
       ],
       (error, results, fields) => {
         callback(error, results);

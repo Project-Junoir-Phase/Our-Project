@@ -10,8 +10,10 @@ import Calender from './Calender'
 import NavBar from './NavBar';   
 import Search from './search';
 import SearchPage from './SearchPage';
+import AddForm from "./add/AddForm";
 function App() {
   
+
 
   return (
     <>
@@ -21,17 +23,19 @@ function App() {
           <Route path="/" element={<NavBar />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Search" element={<SearchPage />} />
+
           {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
         </Routes>
       </Router>
     </React.Suspense>
-
+// <AddForm />;
 
     {/* <div className='app'>
        <Calender/> 
     </div> */}
     </>
   )
+
 }
 
 export default App
