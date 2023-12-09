@@ -9,7 +9,7 @@ const navigate = useNavigate();
 
 const handleButtonClick = () => {
   // Navigate to another page when the button is clicked
-  navigate.push('/Search');
+  navigate('/Search' , {replace : true});
 };
 
 
