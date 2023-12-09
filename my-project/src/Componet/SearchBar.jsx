@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Search from '../search'
 const SearchBar = () => {
   return (
     <div>
-      <h3>bar twill</h3>
+      <Search />
     </div>
   )
 }

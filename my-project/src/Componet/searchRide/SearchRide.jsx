@@ -6,6 +6,7 @@ import AllRides from './AllRides'
 const SearchRide = ({rides }) => {
   const [localRides,setLocalRides]= useState([])
 const [ride,setRide]=useState([])
+
   const fetchRides = ()=>{
     axios.get("http://localhost:3000/api/rides/getAll")
     .then((results)=>{

@@ -11,6 +11,9 @@ import NavBar from './NavBar';
 import Search from './search';
 import SearchPage from './SearchPage';
 import AddForm from "./add/AddForm";
+import SignUp from './User Componet/SignUp/SignUp';
+import Login from './User Componet/Login/Login';
+
 function App() {
   
 
@@ -23,12 +26,15 @@ function App() {
           <Route path="/" element={<NavBar />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Search" element={<SearchPage />} />
+          <Route path="/AddRide" element={<AddForm />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
 
           {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
         </Routes>
       </Router>
     </React.Suspense>
-// <AddForm />;
+     {/* <AddForm />; */}
 
     {/* <div className='app'>
        <Calender/> 
