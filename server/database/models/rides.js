@@ -74,4 +74,64 @@ module.exports = {
       }
     );
   },
+  // a function that can be used to update a ride in the database
+  update: function (
+    callback,
+    startingPoint,
+    endingPoint,
+    smoking,
+    pet,
+    backSeat,
+    loggage,
+    price,
+    carColor,
+    carPlate,
+    carType,
+    seatsBooked,
+    seatsAv,
+    user_id,
+    reservationDate,
+    reservationTime,
+    id
+  ) {
+    const sql = `UPDATE rides SET startingPoint = ?, endingPoint = ?, smoking = ?, pet = ?, backSeat = ?, loggage = ?, price = ?, carColor = ?, carPlate = ?, carType = ?, seatsBooked = ?, seatsAv = ?, user_id = ?, reservationDate = ?, reservationTime = ? WHERE ride_id = ?`;
+    connection.query(
+      sql,
+      [
+        startingPoint,
+        endingPoint,
+        smoking,
+        pet,
+        backSeat,
+        loggage,
+        price,
+        carColor,
+        carPlate,
+        carType,
+        seatsBooked,
+        seatsAv,
+        user_id,
+        reservationDate,
+        reservationTime,
+        id,
+      ],
+      (error, results, fields) => {
+        callback(error, results);
+      }
+    );
+  },
+  // a function that can be used to delete a ride from the database
+  Delete: function (callback, id) {
+    const sql = "DELETE FROM rides WHERE ride_id = ?";
+    connection.query(sql, [id], function (error, results, fields) {
+      callback(error, results);
+    });
+  },
+  // a function that can be used to filter rides from the database
+  //  filter: function (callback, filterOptions) {
+  //     const sql = "SELECT * FROM rides WHERE ?";
+  //     connection.query(sql, [filterOptions], function (error, results, fields) {
+  //       callback(error, results);
+  //     });
+  //  },
 };

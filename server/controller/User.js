@@ -47,7 +47,7 @@ Login :async (req, res) => {
         { expiresIn: "4h" }
       );
 
-      return res.status(200).json({ token });
+      return res.status(200).json({ token , user_id : user.user_id });
     } else {
       return res.status(401).send("Invalid password");
     }
@@ -56,10 +56,19 @@ Login :async (req, res) => {
 
 getUser : (req , res) => {
   try{
-    
-    findUser()
-  }catch (err) {
+    let user = req.user
+    console.log(user)
+   findUser(user.email, (err , user) => {
 
+     if(!user) {
+       return res.status(404).send(err)
+      }
+      
+      res.status(200).json(user)
+    });
+  }catch (err) {
+    console.log(err)
+    res.status(500).send(err)
   }
 }
 

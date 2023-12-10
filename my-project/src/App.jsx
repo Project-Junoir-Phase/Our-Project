@@ -11,14 +11,27 @@ import NavBar from "./NavBar";
 import Search from "./search";
 import SearchPage from "./SearchPage";
 import AddForm from "./add/AddForm";
-import SignUp from "./User Componet/SignUp/SignUp";
 
-import Login from "./User Componet/Login/Login";
-import RideDet from "./Componet/searchRide/RideDet";
-import AllRides from "./Componet/searchRide/AllRides";
-import DummyData from "../dummyData";
+import SignUp from './User Componet/SignUp/SignUp';
+import Login from './User Componet/Login/Login';
+import LandingPage from './LandingPage/HomePage';
+import RideDet from './Componet/searchRide/RideDet';
+import AllRides from './Componet/searchRide/AllRides';
+import DummyData from '../dummyData';
 
-export const searchContext = createContext();
+
+
+
+
+
+
+export const searchContext = createContext()
+
+
+
+
+
+
 
 function App() {
   const [localRides, setLocalRides] = useState(DummyData);
@@ -77,6 +90,7 @@ const filterServices = (services) => {
 
   return (
     <>
+
       <searchContext.Provider value={{ filterRides ,filterServices}}>
         <React.Suspense fallback={<>Loading...</>}>
           <Router>
@@ -94,17 +108,14 @@ const filterServices = (services) => {
               <Route path="/AddRide" element={<AddForm />} />
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Login" element={<Login />} />
+ <Route path="/LandingPage" element={<LandingPage />} />
 
-              {/* <Route path="/desktopone" element={<DesktopOne />} /> */}
+             
             </Routes>
           </Router>
         </React.Suspense>
       </searchContext.Provider>
-      {/* <AddForm />; */}
 
-      {/* <div className='app'>
-       <Calender/> 
-    </div> */}
     </>
   );
 }
