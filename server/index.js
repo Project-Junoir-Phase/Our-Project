@@ -9,7 +9,8 @@ app.use(cors());
 
 //Require application Route modules
 const ridesRoute = require("./routes/rides");
-const UserRoute = require("./routes/User.js")
+const UserRoute = require("./routes/User.js");
+const verifyToken = require("./Helper/auth.js");
 //Middleware to parse incoming requests with JSON and urlencoded payloads
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +26,7 @@ app.get("/:ride_id", ridesRoute);
 app.use("/api/User", UserRoute)
 app.post("/Login" , UserRoute)
 app.post("/Register" , UserRoute)
+app.get("/Profile" , UserRoute)
 
 
 app.listen(port, () => {
