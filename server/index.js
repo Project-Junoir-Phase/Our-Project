@@ -32,7 +32,7 @@ app.use("/api/User", UserRoute)
 app.post("/Login" , UserRoute)
 app.post("/Register" , UserRoute)
 app.get("/Profile" , UserRoute)
-
+app.get("/User/:id" , UserRoute)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

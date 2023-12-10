@@ -26,7 +26,25 @@ const findUser = (email, callback) => {
     }
   });
 };
+
+const getUserbyId = (id , callback) => {
+  const sql = 'select * from users where user_id = ?'
+
+  connection.query(sql , [id] , (err , results)=> {
+    if (err) {
+      return callback(err , null)
+    }
+    if(results.length > 0) {
+      const user = results[0]
+      return callback(null , user)
+    }else {
+      return callback(null , null)
+    }
+  })
+}
+
 module.exports = {
   addUser,
   findUser,
+  getUserbyId,
 }
