@@ -30,8 +30,11 @@ const AllRides = ({ localRides, getOneRide }) => {
   };
 
   return (
-    <div className="flex">
-      <aside>
+    
+    <div className="flex flex-col md:flex-row h-screen">
+      <NavBar/>
+
+      <aside className="md:w-48 bg-gray-100">
         <div className="bg-white p-4 rounded-lg shadow-md">
           <div className="flex flex-col items-center gap-4">
             <div>
@@ -93,7 +96,7 @@ const AllRides = ({ localRides, getOneRide }) => {
         </div>
       </aside>
 
-      <div className="flex-grow ml-48">
+      <div className="flex-grow">
         <Ride getOneRide={getOneRide} localRides={localRides} />
       </div>
     </div>
