@@ -3,7 +3,7 @@ require("dotenv").config()
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 
-const {addUser, findUser} = require("../database/User.js")
+const {addUser, findUser, getUserbyId} = require("../database/User.js")
 
 module.exports = {
 
@@ -57,7 +57,6 @@ Login :async (req, res) => {
 getUser : (req , res) => {
   try{
     let user = req.user
-    console.log(user)
    findUser(user.email, (err , user) => {
 
      if(!user) {
@@ -69,6 +68,21 @@ getUser : (req , res) => {
   }catch (err) {
     console.log(err)
     res.status(500).send(err)
+  }
+},
+
+getUserbyId : (req , res) => {
+  try {
+    let {id} = req.params
+    getUserbyId(id , (err , user) => {
+      if(!user) {
+        return res.status(404).send(err)
+      }
+      res.status(200).json(user)
+    })
+  }catch (err) {
+    console.log(err)
+    res.status(404).send(err)
   }
 }
 

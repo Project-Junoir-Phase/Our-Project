@@ -10,7 +10,6 @@ app.use(cors());
 const ridesRoute = require("./routes/rides");
 const UserRoute = require("./routes/User.js");
 
-const UserRoute = require("./routes/User.js")
 
 
 //Middleware to parse incoming requests with JSON and urlencoded payloads
@@ -33,7 +32,7 @@ app.use("/api/User", UserRoute)
 app.post("/Login" , UserRoute)
 app.post("/Register" , UserRoute)
 app.get("/Profile" , UserRoute)
-
+app.get("/User/:id" , UserRoute)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
