@@ -1,9 +1,10 @@
 import React,{useContext, useState} from "react"
 import MyCalendar from "./Calender"
 import { searchContext } from "./App"
+import { useNavigate } from "react-router-dom"
 
 const Search = ()=>{
-  
+ const navigate = useNavigate()
   const {filterRides} = useContext(searchContext)
   console.log(filterRides)
 const[searchData,SetSearchData] = useState({
@@ -29,14 +30,16 @@ const[searchData,SetSearchData] = useState({
   const handleResrvationDate = (e) => {
     SetSearchData({...searchData , reservationDate : e.target.value})
   }
-  console.log(searchData);
+  
     return(
         <>
         <div className="absolute top-[187px] left-[201px] w-[1018px] h-[59px]">
         <div className="absolute top-[0px] left-[0px] rounded-2xl bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[1018px] h-[59px]" />
         <div className="absolute top-[0px] left-[867px] rounded-2xl bg-deepskyblue w-[151px] h-[59px] overflow-hidden">
           <button onClick={()=>{
-           console.log(filterRides(searchData)) }
+         filterRides(searchData) 
+         navigate("/AllRides",{replace:true})
+        }
 
           }
           className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[calc(50%_-_18.5px)] left-[calc(50%_-_42.5px)] text-3xl tracking-[0.05em] font-semibold font-estedad-vf text-white text-left inline-block w-[111px] hover:text-lightskyblue hover:[text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
