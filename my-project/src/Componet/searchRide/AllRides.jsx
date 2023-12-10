@@ -1,13 +1,14 @@
 import React from 'react'
 import Ride from './Ride'
-import RideDet from './RideDet'
+import NavBar from '../../NavBar'
 
 
-const AllRides = ({rides,getOneRide}) => {
-    // console.log(rides);
+
+const AllRides = ({localRides,getOneRide}) => {
   return (
     <div>
-    <Ride getOneRide={getOneRide} rides={rides}/>
+      <NavBar/>
+    <Ride getOneRide={getOneRide} localRides={localRides}/>
     
     </div>
   )

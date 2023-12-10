@@ -353,3 +353,4 @@ INSERT INTO `carpool`.`rides` (
     3,
     '2023-12-09',
     '08:45 AM'
+)

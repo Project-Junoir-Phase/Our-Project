@@ -7,7 +7,7 @@ import DateOfBirth from './dateOfBirth'
 import Gender from './gender'
 import Password from './password'
 import PhoneNum from './PhoneNum'
-
+import NavBar from '../../NavBar'
 export const UserContext = createContext()
 
 const SignUp = () => {
@@ -38,7 +38,9 @@ const SignUp = () => {
   };
 
   return (
+    
     <UserContext.Provider value={{userData , setUserData, userRegister}}>
+      <NavBar/>
     {currentPage === 1 && (
       <Email 
       onNext={nextPage}
