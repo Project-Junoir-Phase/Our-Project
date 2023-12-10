@@ -9,21 +9,17 @@ const RideDet = ({ ride }) => {
   const navigate = useNavigate()
   const {state}=useLocation()
   console.log(state,"test")
+
+
+
   const handleRedirectClick = () => {
- 
     navigate('/LandingPage', { replace: true });
   };
-console.log(ride.reservationDate)
 
 
 
-const RideDet = ({ ride }) => {
-  console.log(ride,"ride");
-  const navigate = useNavigate()
-  const handleRedirectClick = () => {
-    
-    navigate('/LandingPage', { replace: true });
-  };
+
+
 const bookSeat = ()=>{
   axios.put(`http://127.0.0.1:3000/api/${ride.ride_id}`,{ 
     seatsAv: ride.seatsAv - 1,
@@ -64,7 +60,7 @@ const bookSeat = ()=>{
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">verified profile icone taa verifié</h3>
         <p className="mt-2 max-w-screen-sm text-40px text-blue-500">user.biosss</p>
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">lfaza taa l messaget </h3>
-        <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500"> 
+        {/* <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500"></h3>  */}
 
         <h3>verified profile icone taa verifiÃ©</h3>
         <p>user.bio</p>
