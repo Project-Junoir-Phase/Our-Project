@@ -19,7 +19,7 @@ import LandingPage from "./LandingPage/HomePage";
 import RideDet from "./Componet/searchRide/RideDet";
 import AllRides from "./Componet/searchRide/AllRides";
 import DummyData from "../dummyData";
-
+import WholePage from "./User Componet/Profile/WholePage.jsx"
 
 
 
@@ -108,6 +108,8 @@ function App() {
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/LandingPage" element={<LandingPage />} />
+              <Route path="/Profile" element={<WholePage />} />
+
             </Routes>
           </Router>
         </React.Suspense>
