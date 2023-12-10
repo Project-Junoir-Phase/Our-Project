@@ -19,6 +19,13 @@ const ReviewAndSubmit = ({
     seatsBooked,
     seatsAv,
   } = ridesDetails;
+  console.log(ridesDetails,"hello");
+  console.log(startingPoint,
+    endingPoint,
+    ridesDetails,
+    reservationDate,
+    reservationTime,
+    price,"first data");
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -73,9 +80,8 @@ const ReviewAndSubmit = ({
                   carPlate,
                   carType,
                   seatsBooked,
-                  seatsAv
-                )
-              }
+                  seatsAv,
+                   )}
               className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors"
             ></input>
           </div>

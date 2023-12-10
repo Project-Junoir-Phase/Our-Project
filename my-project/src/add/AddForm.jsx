@@ -22,15 +22,15 @@ const AddForm = () => {
  
 
   const [ridesDetails, setRidesDetails] = useState({
-    smoking: false,
-    pet: false,
-    backSeat: false,
-    loggage: false,
+    smoking: 0,
+    pet: 0,
+    backSeat: 0,
+    loggage: 0,
     carColor: "",
     carPlate: "",
     carType: "",
     seatsBooked: 0,
-    seatsAv: 0,
+    seatsAv: 1,
   });
   console.log(ridesDetails);
 
@@ -59,10 +59,13 @@ const AddForm = () => {
   };
 
   const handlePriceChange = (value) => {
-    setPrice(value);
+    var price = JSON.parse(value)
+    console.log(typeof price,"jason price ");
+    setPrice(price);
   };
 
   const handleRidesDetailsChange = (fieldName, value) => {
+    
     setRidesDetails((prevDetails) => ({
       ...prevDetails,
       [fieldName]: value,
@@ -70,27 +73,43 @@ const AddForm = () => {
   };
 
   const handleSubmit = async (startingPoint,endingPoint,reservationDate,reservationTime,price,smoking , pet , backSeat , loggage , carColor, carPlate , carType , seatsBooked , seatsAv) => {
+    console.log({startingPoint,
+      endingPoint,
+      smoking,
+      pet,
+      backSeat,
+      loggage,
+      price,
+      carColor,
+      carPlate,
+      carType,
+      seatsBooked,
+      seatsAv,
+      reservationDate,
+      reservationTime,
+      user_id : 1},"data axios");
+    
     try {
       const response = await axios.post("http://127.0.0.1:3000/add", {
         startingPoint,
         endingPoint,
-        reservationDate,
-        reservationTime,
-        price,
         smoking,
         pet,
         backSeat,
         loggage,
+        price,
         carColor,
         carPlate,
         carType,
         seatsBooked,
-        user_id : 1,
         seatsAv,
+        reservationDate,
+        reservationTime,
+        user_id : 1
       });
 
       if (response.status === 200) {
-        console.log("Data saved successfully");
+        console.log("Data saved successfully Hamdoullah ");
       }
     } catch (error) {
       console.error("Error saving data:", error);
