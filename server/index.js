@@ -11,7 +11,6 @@ const ridesRoute = require("./routes/rides");
 const UserRoute = require("./routes/User.js");
 
 
-
 //Middleware to parse incoming requests with JSON and urlencoded payloads
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

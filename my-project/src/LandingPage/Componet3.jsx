@@ -23,7 +23,7 @@ const Componet3 = ()=>{
           Help us keep you safe from scams
         </div>
         <div className="absolute top-[134px] left-[754px] text-[17px] tracking-[0.02em] leading-[150%] font-medium whitespace-pre-wrap">
-          <p className="m-0">{`At BlaBlaCar, we're working hard to make our platform as secure as it `}</p>
+          <p className="m-0">{`At Carpool, we're working hard to make our platform as secure as it `}</p>
           <p className="m-0">
             can be. But when scams do happen, we want you to know exactly how
           </p>

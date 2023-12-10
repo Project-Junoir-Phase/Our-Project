@@ -21,6 +21,7 @@ const SearchPage = ()=>{
     <NavBar />
     
         
+
         </>
     )
 }

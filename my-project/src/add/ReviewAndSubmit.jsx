@@ -90,7 +90,9 @@ const ReviewAndSubmit = ({
                   seatsBooked,
                   seatsAv,
                    )
-                   navigate('/AllRides', { replace: true });
+
+                   navigate('/LandingPage', { replace: true });
+
                   }}
               className="text-[19px] p-2 rounded-l-lg  text-white font-semibold transition-colors cursor-pointer [border:none] py-0 px-[31px] bg-orchid absolute top-[487px] left-[989px] rounded-6xl w-[145px] h-[50px] items-center justify-center box-border hover:bg-mediumorchid-100 hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]"
             ></input>
