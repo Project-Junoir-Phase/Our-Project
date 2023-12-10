@@ -11,7 +11,7 @@ import EnterPrice from "./EnterPrice";
 import RidesDetails from "./RidesDetails";
 import ReviewAndSubmit from "./ReviewAndSubmit";
 import axios from "axios";
-
+import NavBar from "../NavBar";
 const AddForm = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [startingPoint, setStartingPoint] = useState("");
@@ -118,6 +118,7 @@ const AddForm = () => {
 
   return (
     <div>
+      <NavBar/>
       {currentPage === 1 && (
         <StartingPoint
           value={startingPoint}

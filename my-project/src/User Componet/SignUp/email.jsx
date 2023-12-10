@@ -32,7 +32,7 @@ const handleEmailChange = (e) => {
             type="button"
             value="Next"
             onClick={onNext}
-            className=" p-2 rounded-tr-lg rounded-br-lg text-white font-semibold transition-colors cursor-pointer [border:none] py-0 px-[31px] bg-orchid absolute top-[317px] left-[899px] rounded-6xl w-[145px] h-[50px] items-center justify-center box-border hover:bg-mediumorchid-100 hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]"
+            className=" text-[19px]  p-2 rounded-tr-lg rounded-br-lg text-white font-semibold transition-colors cursor-pointer [border:none] py-0 px-[31px] bg-orchid absolute top-[317px] left-[899px] rounded-6xl w-[145px] h-[50px] items-center justify-center box-border hover:bg-mediumorchid-100 hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]"
           ></input>
       
     </div>
