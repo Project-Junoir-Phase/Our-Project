@@ -20,7 +20,7 @@ const LandingPage = () => {
 
     return (
         <>
-            
+            <div className="w-[1525px]" >
             <HomeImg />
             <NavBar />
             <div className="absolute top-[225px] left-[90px]"> 
@@ -32,6 +32,7 @@ const LandingPage = () => {
             <Componet4 />
             <Componet5/>
             <Footer/>
+            </div>
 
             
         </>

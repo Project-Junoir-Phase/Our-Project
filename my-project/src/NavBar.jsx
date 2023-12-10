@@ -19,8 +19,8 @@ const handelButton = ()=>{
 
 
     return(
-      <header className="absolute top-[0px] left-[0px] bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border w-[1840px] h-[77px] border-[1px] border-solid border-slateblue">
-        <Link to="/LandingPage" >
+      <header className="absolute top-[0px] left-[0px] bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border w-[1525px] h-[77px] border-[1px] border-solid border-slateblue">
+        <Link to="/SignUp" >
         <button className="cursor-pointer [border:none] p-2.5 bg-[transparent] absolute top-[22px] left-[314px] flex flex-row items-center justify-center">
         <b className="relative text-lg font-neufreit text-deepskyblue text-left hover:[text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)] active:text-mediumblue">
           Carpool
@@ -34,7 +34,7 @@ const handelButton = ()=>{
         src="/plan-de-travail-3-1@2x.png"
       />{serchBtn && (
         <Link to="/Search" >
-<button  className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[11px] left-[1100px] w-[135px] h-[53px] flex flex-row items-center justify-start gap-[12px]" onClick={()=>{
+<button  className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[11px] left-[925px] w-[135px] h-[53px] flex flex-row items-center justify-start gap-[12px]" onClick={()=>{
         console.log("naviate to searchPage" );
         handelButton()
         handleButtonClick()
@@ -51,13 +51,12 @@ const handelButton = ()=>{
       </Link>
       ) }
       
-      <div className="absolute top-[10px] left-[1500px] flex flex-row items-center justify-start gap-[1px]">
+      <div className="absolute top-[10px] left-[1317px] flex flex-row items-center justify-start gap-[1px]">
           <img
             className="relative w-[50px] h-14 object-cover"
             alt=""
             src="/plan-de-travail-3-copie-1@2x.png"
           />
-          <Link to="/SignUp" >
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[31px] h-8 overflow-hidden shrink-0 active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
             <img
               className="absolute h-[29.38%] w-[47.1%] top-[54.37%] right-[27.74%] bottom-[16.25%] left-[25.16%] max-w-full overflow-hidden max-h-full"
@@ -65,11 +64,9 @@ const handelButton = ()=>{
               src="/vector1.svg"
             />
           </button>
-          </Link>
-          
         </div>
       
-      <div className="absolute top-[17px] left-[1270px] w-[165px] h-11">
+      <div className="absolute top-[17px] left-[1110px] w-[165px] h-11">
       <Link to="/AddRide" >
         <button className="cursor-pointer [border:none] py-2.5 pr-[5px] pl-2.5 bg-[transparent] absolute top-[0px] left-[0px] h-11 flex flex-row items-center justify-center box-border gap-[10px]">
           <img    
@@ -91,25 +88,7 @@ export default NavBar
 
 
 
-// <button
-//   title="Add New"
-//   class="group cursor-pointer outline-none hover:rotate-90 duration-300"
-// >
-//   <svg
-//     xmlns="http://www.w3.org/2000/svg"
-//     width="50px"
-//     height="50px"
-//     viewBox="0 0 24 24"
-//     class="stroke-zinc-400 fill-none group-hover:fill-zinc-800 group-active:stroke-zinc-200 group-active:fill-zinc-600 group-active:duration-0 duration-300"
-//   >
-//     <path
-//       d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-//       stroke-width="1.5"
-//     ></path>
-//     <path d="M8 12H16" stroke-width="1.5"></path>
-//     <path d="M12 16V8" stroke-width="1.5"></path>
-//   </svg>
-// </button>
+
 
 
      

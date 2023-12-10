@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../../NavBar";
-
+import { useNavigate } from "react-router-dom";
 const RideDet = ({ ride }) => {
-  console.log(ride);
+  const navigate = useNavigate()
+  const handleRedirectClick = () => {
+    
+    navigate('/LandingPage', { replace: true });
+  };
 
-  console.log(ride.ride_id, "hedhi rideid");
+  // console.log(ride.ride_id, "hedhi rideid");
   return (
     <>
     <NavBar/>
@@ -21,7 +25,7 @@ const RideDet = ({ ride }) => {
         <h3>{ride.price}</h3>
         <h4>3ammi echifour</h4>
         <img src="" alt="taswiret 3ammi echifour" />
-        <h3>verified profile icone taa verifié</h3>
+        <h3>verified profile icone taa verifiÃ©</h3>
         <p>user.bio</p>
         <h3>lfaza taa l messaget </h3>
         <h3>
@@ -50,7 +54,7 @@ const RideDet = ({ ride }) => {
             <p>no room for loggage sorryyy</p>
           )}
         </div>
-        <button> Book now </button>
+        <button onClick={()=>{handleRedirectClick()}}> Book now </button>
       </div>
       </div>
     </div>

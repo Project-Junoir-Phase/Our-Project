@@ -7,7 +7,7 @@ const Componet3 = ()=>{
     return(
 <>
 
-<div className="absolute top-[1250px] left-[0px] w-[1540px] h-[360px] overflow-hidden text-white font-anek-bangla">
+<div className="absolute top-[1250px] left-[0px] w-[1525px] h-[360px] overflow-hidden text-white font-anek-bangla">
         <img
           className="absolute h-[2.61%] w-[0.65%] top-[27.39%] right-[65.96%] bottom-[70%] left-[33.4%] max-w-full overflow-hidden max-h-full hidden"
           alt=""
