@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom'
 const Login = () => {
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
-  const [tokens , setTokens] = useState("")
+  // const [tokens , setTokens] = useState({})
 
   const navigate = useNavigate()
 
-  const userLogin = (email , password) => {
-    axios.post("http://localhost:3000/Login" , {email,password}).then((res) => setTokens(res.data)).catch((err) => console.log(err))
+  const userLogin =async (email , password) => {
+    await  axios.post("http://localhost:3000/Login" , {email,password}).then((res) => localStorage.setItem("token", res.data.user_id)).catch((err) => console.log(err))
   }
 
   return (
@@ -21,8 +21,6 @@ const Login = () => {
         type="text" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
       <button  className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors" onClick={() =>{
         userLogin(email , password)
-        let {token} = tokens
-        localStorage.setItem("token" , token)
         navigate("/" , {replace : true})
       }}>Login</button>
     </div>
