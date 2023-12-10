@@ -65,7 +65,7 @@ const NavBar = () => {
           src="/plan-de-travail-3-copie-1@2x.png"
         />
 
-        <Link to="/SignUp">
+        <Link to="/Profile">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[31px] h-8 overflow-hidden shrink-0 active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
             <select>
               <option></option>
