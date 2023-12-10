@@ -10,7 +10,7 @@ app.use(cors());
 const ridesRoute = require("./routes/rides");
 const UserRoute = require("./routes/User.js");
 
-const UserRoute = require("./routes/User.js")
+
 
 
 //Middleware to parse incoming requests with JSON and urlencoded payloads

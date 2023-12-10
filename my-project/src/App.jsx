@@ -12,26 +12,14 @@ import Search from "./search";
 import SearchPage from "./SearchPage";
 import AddForm from "./add/AddForm";
 
-import SignUp from './User Componet/SignUp/SignUp';
-import Login from './User Componet/Login/Login';
-import LandingPage from './LandingPage/HomePage';
-import RideDet from './Componet/searchRide/RideDet';
-import AllRides from './Componet/searchRide/AllRides';
-import DummyData from '../dummyData';
+import SignUp from "./User Componet/SignUp/SignUp";
+import Login from "./User Componet/Login/Login";
+import LandingPage from "./LandingPage/HomePage";
+import RideDet from "./Componet/searchRide/RideDet";
+import AllRides from "./Componet/searchRide/AllRides";
+import DummyData from "../dummyData";
 
-
-
-
-
-
-
-export const searchContext = createContext()
-
-
-
-
-
-
+export const searchContext = createContext();
 
 function App() {
   const [localRides, setLocalRides] = useState(DummyData);
@@ -51,7 +39,7 @@ function App() {
     setRide(ride);
   };
 
-  // console.log(localRides);
+
 
   const filterRides = (query) => {
     var data = [];
@@ -60,7 +48,7 @@ function App() {
       if (
         ride.startingPoint == query.startingPoint &&
         ride.endingPoint == query.endingPoint &&
-        ride.reservationDate == query.reservationDate 
+        ride.reservationDate == query.reservationDate
         // ride.seatsAv >= query.seatsAv
       ) {
         data.push(ride);
@@ -73,7 +61,7 @@ function App() {
     return data;
   };
 
-const filterServices = (services) => {
+  const filterServices = (services) => {
     var data = localRides.filter((ride) => {
       return Object.entries(services).every(([service, value]) => {
         return ride[service] === value;
@@ -90,12 +78,11 @@ const filterServices = (services) => {
 
   return (
     <>
-
-      <searchContext.Provider value={{ filterRides ,filterServices}}>
+      <searchContext.Provider value={{ filterRides, filterServices }}>
         <React.Suspense fallback={<>Loading...</>}>
           <Router>
             <Routes>
-              <Route path="/" element={<NavBar />} />
+              <Route path="/" element={<NavBar />} /> 
               <Route path="*" element={<NotFound />} />
               <Route path="/Search" element={<SearchPage />} />
               <Route
@@ -108,14 +95,11 @@ const filterServices = (services) => {
               <Route path="/AddRide" element={<AddForm />} />
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/Login" element={<Login />} />
- <Route path="/LandingPage" element={<LandingPage />} />
-
-             
+              <Route path="/LandingPage" element={<LandingPage />} />
             </Routes>
           </Router>
         </React.Suspense>
       </searchContext.Provider>
-
     </>
   );
 }
