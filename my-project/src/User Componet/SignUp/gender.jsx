@@ -13,9 +13,9 @@ const gender = ({onNext, onPrevious}) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-md w-full space-y-8">
-      <h3 className="absolute top-[136px] left-[510px] text-darkslategray text-45xl font-rectaw01-mediumcondensed [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
-        How would you like to be addressed?
-        </h3>
+      <h2 className="absolute top-[116px] left-[310px] text-darkslategray text-45xl font-rectaw01-mediumcondensed [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+      How Would You Like To Be Addressed ?
+        </h2>
       <div className="flex justify-between">
       <button onClick={() => handleGenderChange("Female")}>Mrs. / Ms.</button>
       <button onClick={()=> handleGenderChange("Male")}>Mr.</button>

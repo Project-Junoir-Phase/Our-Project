@@ -6,7 +6,7 @@ const Componet5=()=>{
     return (
         <>
         
-      <div className="absolute top-[2002px] left-[0px] w-[1540px] h-[198px] overflow-hidden text-white font-jost ">
+      <div className="absolute top-[2002px] left-[0px] w-[1525px] h-[198px] overflow-hidden text-white font-jost ">
         <div className="absolute top-[0px] left-[0px] bg-darkslategray w-[1541px] h-[198px]" />
         <button className="cursor-pointer [border:none] py-[30px] pr-[41px] pl-[26px] bg-white absolute top-[67px] left-[207px] rounded-2xl flex flex-row items-center justify-start gap-[17px] hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[280px] h-[81px]">
           <div className="relative text-mid tracking-[0.05em] font-medium font-futura text-darkslategray text-left">

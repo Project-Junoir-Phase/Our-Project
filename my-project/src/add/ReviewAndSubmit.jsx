@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 const ReviewAndSubmit = ({
   startingPoint,
   endingPoint,
@@ -26,6 +28,12 @@ const ReviewAndSubmit = ({
     reservationDate,
     reservationTime,
     price,"first data");
+
+    const navigate = useNavigate()
+    // const handleRedirectAllRides = () => {
+    
+    //   navigate('/AllRides', { replace: true });
+    // };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -66,7 +74,7 @@ const ReviewAndSubmit = ({
               type="button"
               value="Submit"
               onClick={() =>
-                onSubmit(
+                {onSubmit(
                   startingPoint,
                   endingPoint,
                   reservationDate,
@@ -81,7 +89,9 @@ const ReviewAndSubmit = ({
                   carType,
                   seatsBooked,
                   seatsAv,
-                   )}
+                   )
+                   navigate('/AllRides', { replace: true });
+                  }}
               className="text-[19px] p-2 rounded-l-lg  text-white font-semibold transition-colors cursor-pointer [border:none] py-0 px-[31px] bg-orchid absolute top-[487px] left-[989px] rounded-6xl w-[145px] h-[50px] items-center justify-center box-border hover:bg-mediumorchid-100 hover:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]"
             ></input>
           </div>
