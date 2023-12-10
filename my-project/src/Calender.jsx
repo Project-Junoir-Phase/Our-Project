@@ -21,7 +21,7 @@ function MyCalendar({getBD}) {
       <div className="flex bg-white shadow-lg rounded-xl">
         <div className="w-64 h-72 border-r border-gray-100">
           <div className='m-auto flex flex-col text-xs px-6 py-1.5 w-full leading-5 hover:bg-gray-50 hover:text-zinc-800 text-left' >
-          <div class="flex flex-col text-sm font-semibold hover:bg-gray-100 border-gray-100  ">
+          <div className="flex flex-col text-sm font-semibold hover:bg-gray-100 border-gray-100  ">
           <Calendar
             className="text-center w-64 h-0 border-transparent   "
             onChange={onChange}

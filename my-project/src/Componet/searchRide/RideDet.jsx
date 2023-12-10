@@ -1,12 +1,51 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../../NavBar";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 const RideDet = ({ ride }) => {
+  console.log(ride,"ride");
   const navigate = useNavigate()
   const handleRedirectClick = () => {
     
     navigate('/LandingPage', { replace: true });
   };
+const bookSeat = ()=>{
+  axios.put(`http://127.0.0.1:3000/api/${ride.ride_id}`,{ 
+    seatsAv: ride.seatsAv - 1,
+    seatsBooked : ride.seatsBooked + 1
+  })
+  .then((response) => {
+    // Handle the response, you can add additional logic here
+    console.log("Ride details updated successfully", response.data);
+    // Redirect to the landing page
+    navigate("/LandingPage", { replace: true });
+  })
+  .catch((error) => {
+    // Handle errors
+    console.error("Error updating ride details", error);
+  });
+}
+
+// const handleRedirectClic = () => {
+//   // Make an Axios request to update seat availability
+//   axios
+//     .put(/api/update-ride/${ride.ride_id}, {
+//       seatAvailable: ride.seatAvailable - 1,
+//       seatBooked: ride.seatBooked + 1,
+//     })
+//     .then((response) => {
+//       // Handle the response, you can add additional logic here
+//       console.log("Ride details updated successfully", response.data);
+//       // Redirect to the landing page
+//       navigate("/LandingPage", { replace: true });
+//     })
+//     .catch((error) => {
+//       // Handle errors
+//       console.error("Error updating ride details", error);
+//     });
+// };
+
 
   // console.log(ride.ride_id, "hedhi rideid");
   return (
@@ -54,7 +93,10 @@ const RideDet = ({ ride }) => {
             <p>no room for loggage sorryyy</p>
           )}
         </div>
-        <button onClick={()=>{handleRedirectClick()}}> Book now </button>
+        <button onClick={()=>{
+          handleRedirectClick()
+          bookSeat()
+          }}> Book now </button>
       </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavBar =()=>{
 const [serchBtn,setSearchBtn]= useState(true)
 const navigate = useNavigate();
-
+const [selectedOption, setSelectedOption] = useState("");
 const handleButtonClick = () => {
   // Navigate to another page when the button is clicked
   navigate('/Search' , {replace : true});
@@ -16,6 +16,9 @@ const handleButtonClick = () => {
 const handelButton = ()=>{
   setSearchBtn(!serchBtn)
 }
+const handleDropdownChange = (event) => {
+  setSelectedOption(event.target.value);
+};
 
 
     return(
@@ -51,20 +54,31 @@ const handelButton = ()=>{
       </Link>
       ) }
       
-      <div className="absolute top-[10px] left-[1317px] flex flex-row items-center justify-start gap-[1px]">
-          <img
-            className="relative w-[50px] h-14 object-cover"
-            alt=""
-            src="/plan-de-travail-3-copie-1@2x.png"
-          />
+      <div className="absolute top-[10px] left-[1500px] flex flex-row items-center justify-start gap-[1px]">
+        <img
+          value={selectedOption}
+          onChange={handleDropdownChange}
+          className="cursor-pointer p-2.5 bg-transparent border-none absolute top-[0px] left-[0px] h-11 w-[165px] text-deepskyblue relative w-[50px] h-14 object-cover"
+          alt=""
+          src="/plan-de-travail-3-copie-1@2x.png"
+        />
+
+        <Link to="/SignUp">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[31px] h-8 overflow-hidden shrink-0 active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+            <select>
+              <option></option>
+              <option>connexion</option>
+              <option>logOut</option>
+
+          </select>
             <img
               className="absolute h-[29.38%] w-[47.1%] top-[54.37%] right-[27.74%] bottom-[16.25%] left-[25.16%] max-w-full overflow-hidden max-h-full"
               alt=""
               src="/vector1.svg"
             />
           </button>
-        </div>
+        </Link>
+      </div>
       
       <div className="absolute top-[17px] left-[1110px] w-[165px] h-11">
       <Link to="/AddRide" >

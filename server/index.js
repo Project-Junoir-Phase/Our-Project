@@ -24,6 +24,7 @@ app.post("/add", ridesRoute);
 app.get("/:ride_id", ridesRoute);
 app.delete("/:ride_id",ridesRoute)
 app.put("/:ride_id",ridesRoute)
+app.put("/api/:id",ridesRoute)
 
 
 
