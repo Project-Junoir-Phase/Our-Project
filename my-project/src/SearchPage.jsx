@@ -7,13 +7,21 @@ const SearchPage = ()=>{
 
     return (
         <>
-        <NavBar />
-        <div className="absolute top-[187px] left-[201px] w-[584px] h-[177px]">
-      <p className="absolute top-[0px] left-[201px] [font-family:'RectaW01-MediumCondensed-Regular',Helvetica] font-normal text-[#054854] text-[64px] tracking-[0] leading-[normal]">
-        Where do you want to go?
-      </p>
+        <div className="relative w-full h-[1024px] overflow-hidden text-left text-3xl text-darkslategray font-estedad-vf">
+        <div className="absolute top-[107px] left-[101px] w-[1284px] h-[177px]">
+      <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-45xl font-rectaw01-mediumcondensed [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+        Where Do You Want To Go?
+      </h1>
     </div>
-        <Search/>
+    </div>
+    <div className="absolute top-[187px] left-[51px] w-[1184px] h-[177px]">
+      
+    <Search/>
+    </div>
+    <NavBar />
+    
+        
+
         </>
     )
 }

@@ -3,7 +3,7 @@ require("dotenv").config()
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 
-const {addUser, findUser} = require("../database/User.js")
+const {addUser, findUser, getUserbyId, updateUserName , updateUserBio , updateUserPhoneNum , updateUserPicture} = require("../database/User.js")
 
 module.exports = {
 
@@ -57,7 +57,6 @@ Login :async (req, res) => {
 getUser : (req , res) => {
   try{
     let user = req.user
-    console.log(user)
    findUser(user.email, (err , user) => {
 
      if(!user) {
@@ -69,6 +68,78 @@ getUser : (req , res) => {
   }catch (err) {
     console.log(err)
     res.status(500).send(err)
+  }
+},
+
+getUserbyId : (req , res) => {
+  try {
+    let {id} = req.params
+    getUserbyId(id , (err , user) => {
+      if(!user) {
+        return res.status(404).send(err)
+      }
+      res.status(200).json(user)
+    })
+  }catch (err) {
+    console.log(err)
+    res.status(404).send(err)
+  }
+},
+
+updateUserName : (req , res) => {
+  try {
+    let {id} = req.params
+    let {name , lastName} = req.body
+    
+    updateUserName(id , name , lastName , (err , result) => {
+    
+      res.status(200).send("updated!")
+    })
+  }catch (err) {
+    console.log(err)
+    res.status(404).send(err)
+  }
+},
+
+updateUserBio : (req , res) => {
+  try {
+    let {id} = req.params
+    let {bio} = req.body
+
+    updateUserBio(id , bio , (err , result) => {
+      res.status(200).send("updated!")
+    })
+  }catch (err) {
+console.log(err)
+res.status(404).send(err)
+  }
+},
+
+updateUserPhoneNum : (req , res) => {
+  try {
+    let {id} = req.params
+    let {phoneNum} = req.body
+
+    updateUserBio(id , phoneNum , (err , result) => {
+      res.status(200).send("updated!")
+    })
+  }catch (err) {
+console.log(err)
+res.status(404).send(err)
+  }
+},
+
+updateUserPicture : (req , res) => {
+  try {
+    let {id} = req.params
+    let {picProf} = req.body
+
+    updateUserPicture(id , picProf , (err , result) => {
+      res.status(200).send("updated!")
+    })
+  }catch (err) {
+console.log(err)
+res.status(500).send(err)
   }
 }
 

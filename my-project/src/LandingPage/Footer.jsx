@@ -5,13 +5,13 @@ const Footer =()=>{
 
     return(
         <>
-          <footer className="absolute top-[2602px] left-[0px] w-[1440px] h-[72px] overflow-hidden">
+          <footer className="absolute top-[2602px] left-[0px] w-[1525px] h-[72px] overflow-hidden">
         
         <div className="absolute bottom-[-0.7px] left-[1px] bg-white w-[1440px] h-[70.7px]" />
         
       </footer>
       
-      <footer className="absolute top-[2199px] left-[0px] w-[1540px] h-[403px] overflow-hidden text-left text-xl text-black font-neufreit">
+      <footer className="absolute top-[2199px] left-[0px] w-[1525px] h-[403px] overflow-hidden text-left text-xl text-black font-neufreit">
         <div className="absolute bottom-[-0.3px] left-[1px] bg-gainsboro w-[1540px] h-[401.3px]" />
         <ul className="m-0 absolute top-[42px] left-[267px] w-[148px] h-[126px]">
           <b className="absolute top-[0px] left-[0px] tracking-[0.02em]">

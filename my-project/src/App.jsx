@@ -12,6 +12,7 @@ import Search from "./search";
 import SearchPage from "./SearchPage";
 import AddForm from "./add/AddForm";
 
+
 import SignUp from "./User Componet/SignUp/SignUp";
 import Login from "./User Componet/Login/Login";
 import LandingPage from "./LandingPage/HomePage";
@@ -19,7 +20,18 @@ import RideDet from "./Componet/searchRide/RideDet";
 import AllRides from "./Componet/searchRide/AllRides";
 import DummyData from "../dummyData";
 
-export const searchContext = createContext();
+
+
+
+
+
+
+
+export const searchContext = createContext()
+
+
+
+
 
 function App() {
   const [localRides, setLocalRides] = useState(DummyData);

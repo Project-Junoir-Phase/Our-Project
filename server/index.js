@@ -11,8 +11,6 @@ const ridesRoute = require("./routes/rides");
 const UserRoute = require("./routes/User.js");
 
 
-
-
 //Middleware to parse incoming requests with JSON and urlencoded payloads
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -25,6 +23,7 @@ app.post("/add", ridesRoute);
 app.get("/:ride_id", ridesRoute);
 app.delete("/:ride_id",ridesRoute)
 app.put("/:ride_id",ridesRoute)
+app.put("/api/:id",ridesRoute)
 
 
 
@@ -33,7 +32,11 @@ app.use("/api/User", UserRoute)
 app.post("/Login" , UserRoute)
 app.post("/Register" , UserRoute)
 app.get("/Profile" , UserRoute)
-
+app.get("/User/:id" , UserRoute)
+app.put("/Edit/Name/:id", UserRoute)
+app.put("/Edit/Bio/:id", UserRoute)
+app.put("/Edit/PhoneNum/:id", UserRoute)
+app.put("/Edit/Picture/:id", UserRoute)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

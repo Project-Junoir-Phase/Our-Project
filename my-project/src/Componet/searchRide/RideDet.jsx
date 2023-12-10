@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../../NavBar";
-import { useNavigate,useLocation } from "react-router-dom";
 
+import { useNavigate,useLocation } from "react-router-dom";
+import axios from "axios";
 
 
 const RideDet = ({ ride }) => {
@@ -13,7 +14,36 @@ const RideDet = ({ ride }) => {
     navigate('/LandingPage', { replace: true });
   };
 console.log(ride.reservationDate)
-  // console.log(ride.ride_id, "hedhi rideid");
+
+
+
+const RideDet = ({ ride }) => {
+  console.log(ride,"ride");
+  const navigate = useNavigate()
+  const handleRedirectClick = () => {
+    
+    navigate('/LandingPage', { replace: true });
+  };
+const bookSeat = ()=>{
+  axios.put(`http://127.0.0.1:3000/api/${ride.ride_id}`,{ 
+    seatsAv: ride.seatsAv - 1,
+    seatsBooked : ride.seatsBooked + 1
+  })
+  .then((response) => {
+    // Handle the response, you can add additional logic here
+    console.log("Ride details updated successfully", response.data);
+    // Redirect to the landing page
+    navigate("/LandingPage", { replace: true });
+  })
+  .catch((error) => {
+    // Handle errors
+    console.error("Error updating ride details", error);
+  });
+}
+
+
+
+
   return (
     <>
     <NavBar/>
@@ -30,10 +60,17 @@ console.log(ride.reservationDate)
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">Total Price For 1 passanger {ride.price} Dt</h3>
         <h4 className="mt-2 max-w-screen-sm text-40px text-blue-500">3ammi echifour</h4>
         <img src="" alt="taswiret 3ammi echifour" />
+
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">verified profile icone taa verifié</h3>
         <p className="mt-2 max-w-screen-sm text-40px text-blue-500">user.biosss</p>
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">lfaza taa l messaget </h3>
         <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500"> 
+
+        <h3>verified profile icone taa verifiÃ©</h3>
+        <p>user.bio</p>
+        <h3>lfaza taa l messaget </h3>
+        <h3>
+
           Your reservation will be confirmed once the driver accepts your
           request
         </h3>
@@ -59,7 +96,13 @@ console.log(ride.reservationDate)
             <p className="mt-2 max-w-screen-sm text-red-500 underline text-4xl">no room for loggage sorryyy</p>
           )}
         </div>
-        <button onClick={()=>{handleRedirectClick()}}> Book now </button>
+
+
+        <button onClick={()=>{
+          handleRedirectClick()
+          bookSeat()
+          }}> Book now </button>
+
       </div>
       </div>
     </div>

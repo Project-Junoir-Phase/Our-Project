@@ -4,21 +4,21 @@ import { useNavigate } from "react-router-dom";
 const Componet4 =()=>{
   const navigate = useNavigate();
   const handleAddClick = () => {
-    
+
     navigate('/AddRide', { replace: true });
   };
 
     return(
         <>
-        
+
       <div className="absolute top-[1614px] left-[0px] w-[1441px] h-96 overflow-hidden">
         <div className="absolute top-[117px] left-[210px] w-[465px] h-[95px]">
           <div className="absolute top-[0px] left-[0px] tracking-[0.02em] leading-[45.5%] text-[27px]">
             Receive up to 100 Dt in Carpool Bonus!
           </div>
           <div className="absolute top-[43px] left-[0px] text-[14px] tracking-[0.02em] leading-[150%] text-lightslategray">
-            <p className="[margin-block-start:0] [margin-block-end:5px]">{`Good news, drivers: get rewarded for your good habits! Earn the `}</p>
-            <p className="[margin-block-start:0] [margin-block-end:5px]">{`Carpool Bonus by completing 3 carpools in 3 months. See eligibility `}</p>
+            <p className="[margin-block-start:0] [margin-block-end:5px]">{"Good news, drivers: get rewarded for your good habits! Earn the" }</p>
+            <p className="[margin-block-start:0] [margin-block-end:5px]">{"Carpool Bonus by completing 3 carpools in 3 months. See eligibility" }</p>
             <p className="m-0">conditions.</p>
           </div>
         </div>

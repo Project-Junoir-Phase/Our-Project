@@ -1,4 +1,4 @@
-const { getAll, getOne, add,update,Delete} = require("../database/models/rides.js");
+const { getAll, getOne, add,update,Delete , updateSeats} = require("../database/models/rides.js");
 // const rides = require("../database/models/rides.js");
 module.exports = {
   //method to fetch all rides from database.
@@ -42,6 +42,19 @@ module.exports = {
   },
 
   // method to update a ride by id.
+  updateSeat: function (req, res) {
+    const id = req.params.ride_id;
+    console.log(id);
+    updateSeats(
+      function (error, results) {
+        if (error) res.status(500).send(error);
+        else res.json(results);
+      },
+      req.body.seatsBooked,
+      req.body.seatsAv,
+      req.params.id
+    );
+  },
   updateRides: function (req, res) {
     update(
       function (error, results) {
@@ -75,4 +88,5 @@ module.exports = {
       else res.json(results);
     }, id);
   },
+
 };

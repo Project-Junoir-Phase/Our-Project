@@ -120,6 +120,25 @@ module.exports = {
       }
     );
   },
+  updateSeats: function (
+    callback,
+    seatsBooked,
+    seatsAv,
+    id
+  ) {
+    const sql = `UPDATE rides SET  seatsBooked = ?, seatsAv = ? WHERE ride_id = ?`;
+    connection.query(
+      sql,
+      [
+        seatsBooked,
+        seatsAv,
+        id,
+      ],
+      (error, results, fields) => {
+        callback(error, results);
+      }
+    );
+  },
   // a function that can be used to delete a ride from the database
   Delete: function (callback, id) {
     const sql = "DELETE FROM rides WHERE ride_id = ?";

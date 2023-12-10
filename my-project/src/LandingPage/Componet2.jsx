@@ -5,7 +5,7 @@ const Componet2 =()=>{
     return (
         <>
          
-      <div className="absolute top-[1001px] left-[236px] w-[967px] h-[186px] text-mini">
+      <div className="absolute top-[1001px] left-[236px] w-[1525px] h-[186px] text-mini">
         <div className="absolute top-[4px] left-[0px] w-[284px] h-[163px] flex flex-col items-start justify-start py-0 pr-0 pl-1 box-border gap-[21px]">
           <img
             className="relative w-8 h-8 overflow-hidden shrink-0"
