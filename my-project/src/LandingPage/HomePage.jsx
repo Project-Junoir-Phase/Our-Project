@@ -6,6 +6,11 @@ import Search from "../search";
 import Componet1 from "./Componet1";
 import Componet2 from "./Componet2";
 import Componet3 from "./Componet3";
+import Componet4 from "./Componet4";
+import Componet5 from "./Componet5";
+import Footer from "./Footer";
+
+
 
 
 const LandingPage = () => {
@@ -24,6 +29,9 @@ const LandingPage = () => {
             <Componet1/>
             <Componet2/>
             <Componet3/>
+            <Componet4 />
+            <Componet5/>
+            <Footer/>
 
             
         </>

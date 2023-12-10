@@ -1,7 +1,5 @@
 import React from "react";
 
-
-
 const Componet2 =()=>{
 
     return (
@@ -18,7 +16,7 @@ const Componet2 =()=>{
             <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Your pick of rides at low prices
             </div>
-            <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray">
+            <div className="relative text-sm tracking-[-0.03em] leading-[24%] text-lightslategray">
               <p className="[margin-block-start:0] [margin-block-end:19px]">
                 No matter where you’re going, by bus or
               </p>
@@ -42,8 +40,8 @@ const Componet2 =()=>{
             <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Trust who you travel with
             </div>
-            <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray inline-block w-[296px]">
-              <p className="[margin-block-start:0] [margin-block-end:19px]">{`We take the time to get to know each of our `}</p>
+            <div className="relative text-sm  text-lightslategray inline-block w-[296px] tracking-[-0.03em] leading-[24%]">
+              <p className="[margin-block-start:0] [margin-block-end:19px]  ">{`We take the time to get to know each of our `}</p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`members and bus partners. We check `}</p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`reviews, profiles and IDs, so you know who `}</p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`you’re travelling with and can book your `}</p>
@@ -63,7 +61,7 @@ const Componet2 =()=>{
             <div className="relative tracking-[-0.04em] text-[20px] leading-[145.5%]">
               Scroll, click, tap and go!
             </div>
-            <div className="relative text-sm tracking-[-0.07em] leading-[0%] text-lightslategray">
+            <div className="relative text-sm tracking-[-0.03em] leading-[24%] text-lightslategray">
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`Booking a ride has never been easier! `}</p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`Thanks to our simple app powered by great `}</p>
               <p className="[margin-block-start:0] [margin-block-end:19px]">{`technology, you can book a ride close to `}</p>
