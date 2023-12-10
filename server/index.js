@@ -33,6 +33,10 @@ app.post("/Login" , UserRoute)
 app.post("/Register" , UserRoute)
 app.get("/Profile" , UserRoute)
 app.get("/User/:id" , UserRoute)
+app.put("/Edit/Name/:id", UserRoute)
+app.put("/Edit/Bio/:id", UserRoute)
+app.put("/Edit/PhoneNum/:id", UserRoute)
+app.put("/Edit/Picture/:id", UserRoute)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
