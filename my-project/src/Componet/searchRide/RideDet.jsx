@@ -8,6 +8,10 @@ const RideDet = ({ ride }) => {
   return (
     <>
     <NavBar/>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-white via-white to-white shadow-lg">
+        <div className="w-full max-w-4xl px-4 py-8 mx-auto bg-white rounded-lg shadow-xl">
+          <div className="max-w-md mx-auto space-y-6">
+
       <div>
         <h1>{ride.reservationDate}</h1>
         <h2>{ride.startingPoint}</h2>
@@ -48,6 +52,9 @@ const RideDet = ({ ride }) => {
         </div>
         <button> Book now </button>
       </div>
+      </div>
+    </div>
+</div>
     </>
   );
 };
