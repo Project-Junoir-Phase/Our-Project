@@ -19,7 +19,7 @@ import AllRides from "./Componet/searchRide/AllRides";
 import DummyData from "../dummyData";
 import WholePage from "./User Componet/Profile/WholePage.jsx"
 
-import LoginPage from "./User Componet/Login/loginpage.jsx";
+
 
 
 
@@ -35,11 +35,12 @@ export const searchContext = createContext()
 function App() {
   const [localRides, setLocalRides] = useState(DummyData);
   const [ride, setRide] = useState([]);
-
+console.log(ride);
   const fetchRides = () => {
     axios
       .get("http://localhost:3000/api/rides/getAll")
       .then((results) => {
+        console.log(results.data);
         setLocalRides(results.data);
       })
       .catch((err) => {
@@ -56,6 +57,7 @@ function App() {
     var data = [];
 
     localRides.map((ride) => {
+      console.log(ride);
       if (
         ride.startingPoint == query.startingPoint &&
         ride.endingPoint == query.endingPoint &&

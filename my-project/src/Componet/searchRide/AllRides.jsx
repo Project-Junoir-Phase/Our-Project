@@ -6,6 +6,9 @@ import Search from "../../search";
 import { useContext, useState } from "react";
 import { searchContext } from "../../App";
 
+
+
+
 const AllRides = ({ localRides, getOneRide }) => {
   const { filterServices } = useContext(searchContext);
   const [smokingChecked, setSmokingChecked] = useState(false);
@@ -30,13 +33,16 @@ const AllRides = ({ localRides, getOneRide }) => {
   };
 
   return (
-    
-    <div className="flex flex-col md:flex-row h-screen">
-      <NavBar/>
+    <>
 
-      <aside className="md:w-48 bg-gray-100">
-        <div className="bg-white p-4 rounded-lg shadow-md">
-          <div className="flex flex-col items-center gap-4">
+<NavBar/>
+<Search/>
+
+    <div className="flex flex-col md:flex-row h-screen mt-72 ml-28">
+     
+      <aside className="md:w-48 ">
+        <div className="bg-white p-4 rounded-lg shadow-md ">
+          <div className="flex flex-col items-center  gap-4">
             <div>
               <label className="flex items-center">
                 <input
@@ -45,7 +51,7 @@ const AllRides = ({ localRides, getOneRide }) => {
                   onChange={() => setLoggageChecked(!loggageChecked)}
                   className="form-checkbox text-blue-500 h-6 w-6"
                 />
-                <span className="ml-2 text-blue-500">Extra Luggage</span>
+                <span className="ml-2 text-blue-500">Extra Loggage</span>
               </label>
             </div>
             <div>
@@ -100,6 +106,12 @@ const AllRides = ({ localRides, getOneRide }) => {
         <Ride getOneRide={getOneRide} localRides={localRides} />
       </div>
     </div>
+    
+    
+    
+    
+    </>
+    
   );
 };
 

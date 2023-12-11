@@ -19,7 +19,7 @@ const AddForm = () => {
   const [reservationDate, setReservationDate] = useState("");
   const [reservationTime, setReservationTime] = useState("");
   const [price, setPrice] = useState("");
- 
+  const [locationName, setLocationName] = useState('');
 
   const [ridesDetails, setRidesDetails] = useState({
     smoking: 0,
@@ -34,6 +34,11 @@ const AddForm = () => {
   });
   console.log(ridesDetails);
 
+
+
+
+
+
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
   };
@@ -43,12 +48,13 @@ const AddForm = () => {
   };
 
   const handleStartingPointChange = (value) => {
-  
+    setLocationName(value)
     setStartingPoint(value);
+    
   };
 
   const handleEndingPointChange = (value) => {
-    console.log(value);
+    console.log(locationName,"in ending point");
     setEndingPoint(value);
   };
 

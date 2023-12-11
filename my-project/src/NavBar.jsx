@@ -59,6 +59,7 @@ const NavBar = () => {
       )}
 
       <div className="absolute top-[10px] left-[1300px] flex flex-row items-center justify-start gap-[1px]">
+      <Link to="/Profile">
         <img
           value={selectedOption}
           onChange={handleDropdownChange}
@@ -66,12 +67,15 @@ const NavBar = () => {
           alt=""
           src="/plan-de-travail-3-copie-1@2x.png"
         />
-
-        <Link to="/Profile">
+        </Link>
+        <Link to="/SignUp">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] relative w-[31px] h-8 overflow-hidden shrink-0 active:shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]">
             <select>
               <option></option>
+              <Link to="/Login">
               <option>LogIn</option>
+              </Link>
+              
               <option>logOut</option>
             </select>
             <img

@@ -3,8 +3,8 @@ import mapboxgl from 'mapbox-gl';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoid29ya3NwYWNlODU0IiwiYSI6ImNsbDlnZHgxbzFmNmQzY2w3cnlteDF6cmQifQ.0mKeOtdHiEMHDyGzUef0fw';
 
-const Maps = ({onChange , onChangeEnd}) => {
-console.log(onChangeEnd);
+const Maps = ({onChange}) => {
+
 
 
 
@@ -15,7 +15,7 @@ console.log(onChangeEnd);
   const [lat, setLat] = useState(36.81897); 
   const [zoom, setZoom] = useState(9);
   const [locationName, setLocationName] = useState('');
-
+ console.log(locationName);
   useEffect(() => {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -55,8 +55,8 @@ map.current.on('load', () => {
  
        if (data.features.length > 0) {
          const name = data.features[0].place_name;
+         setLocationName(name);
          onChange(name)
-         onChangeEnd(name)
          
        } else {
          setLocationName('');

@@ -11,10 +11,12 @@ const RideDet = ({ ride }) => {
   const [userName,setUserName]=useState("")
   const [userPicture,setUserPicture]=useState("")
   const [phoneNum,setPhoneNum]= useState("")
-  console.log(state, "test");
+  const [img,setImg] = useState(false)
+  
 
   const handleRedirectClick = () => {
     navigate("/LandingPage", { replace: true });
+
   };
 
   const bookSeat = () => {
@@ -53,7 +55,7 @@ const RideDet = ({ ride }) => {
   return (
     <>
       <NavBar />
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-white via-white to-white shadow-lg">
+      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-white mt-44 via-white to-white shadow-lg">
         <div className="w-full max-w-4xl px-4 py-8 mx-auto bg-white rounded-lg shadow-xl">
           <div className="max-w-md mx-auto space-y-6">
             <div>
@@ -75,7 +77,10 @@ const RideDet = ({ ride }) => {
               <h4 className="mt-2 max-w-screen-sm text-40px text-blue-500">
                 {userName}
               </h4>
-              <img src="" alt="taswiret 3ammi echifour" />
+              <img 
+              className="w-16 h-16 "
+              src={img ? userPicture : "https://cdn1.iconfinder.com/data/icons/basic-ui-set-v5-user-outline/64/Account_profile_user_avatar_small-512.png" } 
+              alt="taswiret 3ammi echifour" />
 
               <h3 className="mt-2 max-w-screen-sm text-40px text-blue-500">
                 verified profile icone taa verifié
@@ -131,6 +136,7 @@ const RideDet = ({ ride }) => {
               </div>
 
               <button
+              className="relative py-2 px-8 text-black text-base font-bold uppercase rounded-[50px] overflow-hidden bg-white transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-[50px] hover:before:left-0"
                 onClick={() => {
                   handleRedirectClick();
                   bookSeat();

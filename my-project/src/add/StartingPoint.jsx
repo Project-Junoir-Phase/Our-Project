@@ -20,11 +20,11 @@ const StartingPoint = ({ value, onChange, onNext , startingPoint }) => {
         </h2>
         </div>
         <input
-          className="bg-white border  max-w-lg h-8 ml-24  border-gray-300 py-2 px-4 block w-full rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+          className="bg-white border mr-80  max-w-lg h-8 ml-24  border-gray-300 py-2 px-4 block w-full rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           placeholder="Leaving From"
           id=""
           type="text"
-          value={startingPoint}
+          value={value}
           onChange={(e) => onChange(e.target.value)}
         />
         

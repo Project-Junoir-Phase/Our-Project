@@ -247,6 +247,21 @@ INSERT INTO `carpool`.`users` (
 
 
 
+INSERT INTO `carpool`.`users` (`user_id`, `name`, `lastName`, `dateOfBirth`, `phoneNum`, `email`, `gender`, `bio`, `password`) VALUES ('1', 'Raja', 'Mansour', '28-05-1992', '123123', 'raja@gmail.com', 'female', 'funny and welcome aboard', '123123');
+
+
+INSERT INTO `carpool`.`rides` (`ride_id`, `startingPoint`, `endingPoint`, `smoking`, `pet`, `backSeat`, `loggage`, `price`, `carColor`, `carPlate`, `carType`, `seatsBooked`, `seatsAv`, `reservationDate`, `reservationTime`, `user_id`) VALUES ('1', 'Sousse', 'Tunis', '0', '1', '1', '0', '20', 'red', '200TU200', 'Lambargini', '0', '4', '12-12-2023', '05:05 PM', '1');
+INSERT INTO `carpool`.`rides` (`ride_id`, `startingPoint`, `endingPoint`, `smoking`, `pet`, `backSeat`, `loggage`, `price`, `carColor`, `carPlate`, `carType`, `seatsBooked`, `seatsAv`, `reservationDate`, `reservationTime`, `user_id`) VALUES ('2', 'Sfax', 'Tunis', '1', '1', '1', '1', '15', 'blue', '200TU200', 'Porsh', '0', '3', '12-12-2023', '05:05 PM', '1');
+INSERT INTO `carpool`.`rides` (`ride_id`, `startingPoint`, `endingPoint`, `smoking`, `pet`, `backSeat`, `loggage`, `price`, `carColor`, `carPlate`, `carType`, `seatsBooked`, `seatsAv`, `reservationDate`, `reservationTime`, `user_id`) VALUES ('3', 'Bizerte', 'Tunis', '1', '1', '1', '1', '10', 'white', '177TU177', 'Clio', '0', '3', '12-12-2023', '05:05 PM', '1');
+INSERT INTO `carpool`.`rides` (`ride_id`, `startingPoint`, `endingPoint`, `smoking`, `pet`, `backSeat`, `loggage`, `price`, `carColor`, `carPlate`, `carType`, `seatsBooked`, `seatsAv`, `reservationDate`, `reservationTime`, `user_id`) VALUES ('4', 'Mahdia', 'Sousse', '1', '1', '1', '1', '10', 'red', '177TU177', 'Clio', '0', '3', '12-12-2023', '05:05 PM', '1');
+INSERT INTO `carpool`.`rides` (`ride_id`, `startingPoint`, `endingPoint`, `smoking`, `pet`, `backSeat`, `loggage`, `price`, `carColor`, `carPlate`, `carType`, `seatsBooked`, `seatsAv`, `reservationDate`, `reservationTime`, `user_id`) VALUES ('5', 'Sidi Bouzid', 'Kébelli', '1', '1', '1', '0', '25', 'white', '205TU205', 'Clio Bombé', '0', '3', '12-12-2023', '06:05 PM', '1');
+
+
+
+
+
+
+
 
 
 

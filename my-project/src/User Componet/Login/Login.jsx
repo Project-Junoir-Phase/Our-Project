@@ -10,7 +10,8 @@ const Login = () => {
   const [email , setEmail] = useState("")
   const [password , setPassword] = useState("")
   // const [tokens , setTokens] = useState({})
-
+console.log(email,"ksx");
+console.log(password,"sjcdsi");
   const navigate = useNavigate()
 
   const userLogin =async (email , password) => {
