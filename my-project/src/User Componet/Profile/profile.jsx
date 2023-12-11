@@ -51,7 +51,7 @@ const {userData} =  useContext(UserContext)
                 </div>
               </div>
               <div className="text-center mt-12">
-                <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                <h3 className="text-4xl font-semibold leading-normal  text-blueGray-700 mb-2">
                   {userData.name + " " + userData.lastName} 
                 </h3>
                 <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">

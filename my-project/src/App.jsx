@@ -94,7 +94,7 @@ function App() {
         <React.Suspense fallback={<>Loading...</>}>
           <Router>
             <Routes>
-              <Route path="/" element={<NavBar />} /> 
+              <Route path="/" element={<LandingPage />} /> 
               <Route path="*" element={<NotFound />} />
               <Route path="/Search" element={<SearchPage />} />
               <Route

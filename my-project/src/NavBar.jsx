@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="absolute top-[0px] left-[0px] bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border w-[1525px] h-[77px] border-[1px] border-solid border-slateblue">
+    <header className="absolute top-[0px] left-[0px] flex flex-row bg-white shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] box-border w-[1525px] h-[77px] border-[1px] border-solid border-slateblue">
       <Link to="/LandingPage">
         <button className="cursor-pointer [border:none] p-2.5 bg-[transparent] absolute top-[22px] left-[314px] flex flex-row items-center justify-center">
           <b className="relative text-lg font-neufreit text-deepskyblue text-left hover:[text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)] active:text-mediumblue">
@@ -28,16 +28,18 @@ const NavBar = () => {
           </b>
         </button>
       </Link>
-
-      <img
-        className="absolute top-[10px] left-[99px] w-[181px] h-[57px] object-cover"
+      <Link to="/LandingPage">
+        <img
+        className="absolute top-[8px] left-[129px] w-[141px] h-[67px] object-cover "
         alt=""
-        src="/plan-de-travail-3-1@2x.png"
+        src="/public/2x/Plan de travail 3@2x-8.png"
       />
+      </Link>
+      
       {serchBtn && (
         <Link to="/Search">
           <button
-            className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[11px] left-[925px] w-[135px] h-[53px] flex flex-row items-center justify-start gap-[12px]"
+            className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[9px] left-[925px] w-[135px] h-[53px] flex flex-row items-center justify-start gap-[12px]"
             onClick={() => {
               console.log("naviate to searchPage");
               handelButton();
@@ -56,11 +58,11 @@ const NavBar = () => {
         </Link>
       )}
 
-      <div className="absolute top-[10px] left-[1500px] flex flex-row items-center justify-start gap-[1px]">
+      <div className="absolute top-[10px] left-[1300px] flex flex-row items-center justify-start gap-[1px]">
         <img
           value={selectedOption}
           onChange={handleDropdownChange}
-          className="cursor-pointer p-2.5 bg-transparent border-none absolute top-[0px] left-[0px] h-11 w-[165px] text-deepskyblue relative w-[50px] h-14 object-cover"
+          className="cursor-pointer p-2.5 bg-transparent border-none  top-[0px] left-[0px]  text-deepskyblue relative w-[50px] h-14 object-cover"
           alt=""
           src="/plan-de-travail-3-copie-1@2x.png"
         />
