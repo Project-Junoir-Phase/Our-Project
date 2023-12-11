@@ -80,7 +80,7 @@ const[searchData,SetSearchData] = useState({
             </div>
           </button>
           <img
-            className="absolute top-[0px] left-[-1px] w-0.5 h-[42.8px]"
+            className="absolute top-[0px] left-[1px] w-0.5 h-[42.8px]"
             alt=""
             src="/line-1.svg"
           />

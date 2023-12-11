@@ -11,8 +11,6 @@ import NavBar from "./NavBar";
 import Search from "./search";
 import SearchPage from "./SearchPage";
 import AddForm from "./add/AddForm";
-
-
 import SignUp from "./User Componet/SignUp/SignUp";
 import Login from "./User Componet/Login/Login";
 import LandingPage from "./LandingPage/HomePage";
@@ -21,6 +19,7 @@ import AllRides from "./Componet/searchRide/AllRides";
 import DummyData from "../dummyData";
 import WholePage from "./User Componet/Profile/WholePage.jsx"
 
+import LoginPage from "./User Componet/Login/loginpage.jsx";
 
 
 

@@ -43,10 +43,12 @@ const AddForm = () => {
   };
 
   const handleStartingPointChange = (value) => {
+  
     setStartingPoint(value);
   };
 
   const handleEndingPointChange = (value) => {
+    console.log(value);
     setEndingPoint(value);
   };
 
@@ -124,6 +126,8 @@ const AddForm = () => {
           value={startingPoint}
           onChange={handleStartingPointChange}
           onNext={nextPage}
+          startingPoint={startingPoint}
+
         />
       )}
 
@@ -133,6 +137,7 @@ const AddForm = () => {
           onChange={handleEndingPointChange}
           onNext={nextPage}
           onPrevious={previousPage}
+          endingPoint={endingPoint}
         />
       )}
 

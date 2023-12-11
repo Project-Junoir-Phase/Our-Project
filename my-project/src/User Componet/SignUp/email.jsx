@@ -19,7 +19,7 @@ const handleEmailChange = (e) => {
 
 <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-md w-full space-y-8">
-    <h1 className="absolute top-1/5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-darkslategray text-45xl font-rectaw01-mediumcondensed [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
+    <h1 className="absolute top-[116px] left-[550px] text-darkslategray text-45xl font-rectaw01-mediumcondensed [text-shadow:0px_4px_4px_rgba(0,_0,_0,_0.25)]">
     What's Your Email ?
       </h1>
       <div className="input-group ">

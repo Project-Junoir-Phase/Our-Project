@@ -41,7 +41,7 @@ module.exports = {
     },
     fontSize: {
       "45xl": "64px",
-      xl: "20px",
+      xl: "21px",
       "3xl": "22px",
       lg: "18px",
       mini: "15px",
